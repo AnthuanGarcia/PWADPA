@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'FreeSans';
+    font-style: normal;
+    font-display: swap;
+    src: local('FreeSans'), url('/fonts/freesans.woff') format('woff');
+}
+
+html {
+    margin: 5%;
+    padding: 0;
+}
+
+header, section {
+    font-family: Helvetica, 'FreeSans';
+}
+
+h1 {
+    font-weight: bold;
+}
+
+header {
+    font-size: 18pt;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-left {
+    margin-right: 1.5rem;
+}
+
+.container-right {
+    margin-left: 1.5rem;
+}
+
+.container-link {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-link a {
+    margin-top: 0.1rem;
+}
+
+.container-img {
+    width:  16px;
+    height: 16px;
+    margin: 0.25rem;
+}
+
+.container-img img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container-left {
+        margin-right: 0;
+    }
+    
+    .container-right {
+        margin-left: 0;
+    }
+    
+}
