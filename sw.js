@@ -1,21 +1,21 @@
 const cacheName = 'CvCarlos-v1';
 
 const contentToCache = [
-  '/',
-  '/index.html',
-  '/app.js',
-  '/styles.css',
-  '/fonts/freesans.ttf',
-  '/fonts/freesans.woff',
-  '/favicon.ico',
-  '/icons/at.svg',
-  '/icons/logo-github.svg',
-  '/icons/user.png',
-  '/iconapp/android-chrome-192x192.png',
-  '/iconapp/favicon-16x16.png',
-  '/iconapp/favicon-32x32.png',
-  '/head.js',
-  '/three/three.min.js',
+  './',
+  './index.html',
+  './app.js',
+  './styles.css',
+  './fonts/freesans.ttf',
+  './fonts/freesans.woff',
+  './favicon.ico',
+  './icons/at.svg',
+  './icons/logo-github.svg',
+  './icons/user.png',
+  './iconapp/android-chrome-192x192.png',
+  './iconapp/favicon-16x16.png',
+  './iconapp/favicon-32x32.png',
+  './head.js',
+  './three/three.min.js',
 ];
 
 self.addEventListener('install', (e) => {
