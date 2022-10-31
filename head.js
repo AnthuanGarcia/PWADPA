@@ -41,7 +41,7 @@ void main() {
 
 	vec2 circle = vec2(cos(u_time), sin(u_time));
 
-	range(1.0, 6.0, 0.5) {
+	range(1.0, 6.0, 1.0) {
 
 		uv.x += 0.4/i * sin(10.0*i*uv.y + u_time + circle.x);
         uv.y += 0.1/i * cos(7.0*i*uv.x  + u_time+ circle.y);
