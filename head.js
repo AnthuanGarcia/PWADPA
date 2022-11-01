@@ -84,21 +84,26 @@ function init() {
 
     scene.add(meshPlane0);
 
-    const setSize = (container, camera, renderer)  => {
+    resizeRendererToDisplaySize = (renderer) => {
 
-        camera.aspect = container.clientWidth / container.clientHeight;    
-        camera.updateProjectionMatrix();
-    
-        renderer.setSize(container.clientWidth, container.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-    
+        const canvas = renderer.domElement;
+        const width = canvas.clientWidth;
+        const height = canvas.clientHeight;
+        const needResize = canvas.width !== width || canvas.height !== height;
+
+        if (needResize) {
+          renderer.setSize(width, height, false);
+        }
+
+        return needResize;
+
     }
 
-    setSize(canva, camera, renderer);
+    /*setSize(canva, camera, renderer);
 
     window.addEventListener('resize', () => {
         setSize(canva, camera, renderer);
-    });
+    });*/
 
     let t = 0.0;
 
@@ -107,6 +112,14 @@ function init() {
         t += 0.01;
 
         const canvas = renderer.domElement;
+
+        if (resizeRendererToDisplaySize(renderer)) {
+
+            camera.aspect = canvas.clientWidth / canvas.clientHeight;
+            camera.updateProjectionMatrix();
+            
+        }
+
         uniformsShader["u_resolution"]["value"].set(canvas.width, canvas.height);
         uniformsShader["u_time"]["value"] = t;
 

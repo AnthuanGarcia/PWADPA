@@ -2,6 +2,8 @@
     "name": "Cv Carlos Anthuan Garcia Castellanos",
     "short_name": "CV Carlos",
     "description": "Curriculum Vitae",
+    "scope": "./",
+    "start_url": "./index.html",
     "icons": [
         {
             "src": "iconapp/android-chrome-192x192.png",
@@ -19,8 +21,6 @@
             "type": "image/png"
         }
     ],
-    "scope": "./",
-    "start_url": "./index.html",
     "display": "fullscreen",
     "theme_color": "#FFF",
     "background_color": "#DDDDDD"
